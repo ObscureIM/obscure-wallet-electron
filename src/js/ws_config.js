@@ -62,7 +62,7 @@ config.defaultMixin = 3;
 // to convert from atomic unit
 config.decimalDivisor = 100;
 // to represent human readable value
-config.decimalPlaces = 2;
+config.decimalPlaces = 8;
 
 // obfuscate address book entries, set to false if you want to save it in plain json file.
 // not for security because the encryption key is attached here
