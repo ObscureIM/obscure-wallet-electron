@@ -1,20 +1,20 @@
 var config = {};
 
 // self explanatory, your application name, descriptions, etc
-config.appName = 'WalletShell';
-config.appDescription = 'TurtleCoin Wallet';
-config.appSlogan = 'Slow and steady wins the race!';
+config.appName = 'Obsidian Wallet';
+config.appDescription = 'Obsidian Wallet';
+config.appSlogan = 'Privacy Maximized';
 config.appId = 'lol.turtlecoin.walletshell';
-config.appGitRepo = 'https://github.com/turtlecoin/turtle-wallet-electron';
+config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electron.git';
 
 // default port number for your daemon (e.g. TurtleCoind)
-config.daemonDefaultRpcPort = 11898;
+config.daemonDefaultRpcPort = 57576;
 
 // wallet file created by this app will have this extension
 config.walletFileDefaultExt = 'twl';
 
 // change this to match your wallet service executable filename
-config.walletServiceBinaryFilename = 'turtle-service';
+config.walletServiceBinaryFilename = 'obsidian-service';
 
 // version on the bundled service (turtle-service)
 config.walletServiceBinaryVersion = "v0.10.0";
@@ -44,11 +44,11 @@ config.remoteNodeListFallback = [
 ];
 
 // your currency name
-config.assetName = 'TurtleCoin';
+config.assetName = 'Obsidian';
 // your currency ticker
-config.assetTicker =  'TRTL';
+config.assetTicker =  'XSD';
 // your currency address prefix, for address validation
-config.addressPrefix =  'TRTL';
+config.addressPrefix =  'XSD';
 // standard wallet address length, for address validation
 config.addressLength = 99;
 // intergrated wallet address length, for address validation
@@ -74,15 +74,15 @@ config.addressBookObfuscationKey = '79009fb00ca1b7130832a42de45142cf6c4b7f333fe6
 config.addressBookSampleEntries = [
     { name: 'labaylabay',
       address: 'TRTLv1A26ngXApin33p1JsSE9Yf6REj97Xruz15D4JtSg1wuqYTmsPj5Geu2kHtBzD8TCsfd5dbdYRsrhNXMGyvtJ61AoYqLXVS',
-      paymentId: 'DF794857BC4587ECEC911AF6A6AB02513FEA524EC5B98DA8702FAC92195A94B2', 
+      paymentId: 'DF794857BC4587ECEC911AF6A6AB02513FEA524EC5B98DA8702FAC92195A94B2',
     },
     { name: 'Macroshock',
       address: 'TRTLv3R17LWbVw8Qv4si2tieyKsytUfKQXUgsmjksgrgJsTsnhzxNAeLKPjsyDGF7HGfjqkDegu2LPaC5NeVYot1SnpfcYmjwie',
-      paymentId: '', 
+      paymentId: '',
     },
     { name: 'RockSteady',
       address: 'TRTLuxEnfjdF46cBoHhyDtPN32weD9fvL43KX5cx2Ck9iSP4BLNPrJY3xtuFpXtLxiA6LDYojhF7n4SwPNyj9M64iTwJ738vnJk',
-      paymentId: '', 
+      paymentId: '',
     }
 ];
 
