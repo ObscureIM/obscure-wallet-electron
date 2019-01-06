@@ -52,7 +52,7 @@ var WalletShellManager = function(){
 WalletShellManager.prototype.init = function(){
     this._getSettings();
     if(this.serviceApi !== null) return;
-    
+
     let cfg = {
         service_host: this.serviceHost,
         service_port: this.servicePort,
@@ -78,7 +78,7 @@ WalletShellManager.prototype._reinitSession = function(){
     });
 };
 
-// check 
+// check
 WalletShellManager.prototype.serviceStatus = function(){
     return  (undefined !== this.serviceProcess && null !== this.serviceProcess);
 };
@@ -148,7 +148,7 @@ WalletShellManager.prototype.startService = function(walletFile, password, onErr
     }
 
     if(this.syncWorker) this.stopSyncWorker();
-    
+
     let serviceArgs = this.serviceArgsDefault.concat([
         '-w', walletFile,
         '-p', password,
@@ -212,7 +212,7 @@ WalletShellManager.prototype._spawnService = function(walletFile, password, onEr
         serviceArgs.push(logFile);
     }
 
-    
+
     let configFile = wsession.get('walletConfig', null);
     if(configFile){
         let configFormat = settings.get('service_config_format','ini');
@@ -239,7 +239,7 @@ WalletShellManager.prototype._spawnService = function(walletFile, password, onEr
         log.error(`${config.walletServiceBinaryFilename} is not running`);
         return false;
     }
-    
+
     this.serviceProcess.on('close', () => {
         this.terminateService(true);
         log.debug(`${config.walletServiceBinaryFilename} closed`);
@@ -357,7 +357,7 @@ WalletShellManager.prototype.terminateService = function(force) {
             }
         }
     }
-    
+
     this.serviceProcess = null;
     this.servicePid = null;
 };
@@ -373,7 +373,7 @@ WalletShellManager.prototype.startSyncWorker = function(){
     this.syncWorker = childProcess.fork(
         path.join(__dirname,'./ws_syncworker.js')
     );
-    
+
     this.syncWorker.on('message', (msg) => {
         if(msg.type === 'serviceStatus' ){
             wsm.syncWorker.send({
@@ -430,7 +430,7 @@ WalletShellManager.prototype.stopSyncWorker = function(){
 
 WalletShellManager.prototype.getNodeFee = function(){
     let wsm = this;
-    
+
     this.serviceApi.getFeeInfo().then((res) => {
         let theFee;
         if(!res.amount || !res.address){
@@ -440,7 +440,7 @@ WalletShellManager.prototype.getNodeFee = function(){
         }
         wsession.set('nodeFee', theFee);
         if(theFee <= 0) return theFee;
-        
+
         wsm.notifyUpdate({
             type: 'nodeFeeUpdated',
             data: theFee
@@ -585,12 +585,12 @@ WalletShellManager.prototype._fusionGetMinThreshold = function(threshold, minThr
         threshold = parseInt(threshold,10);
         minThreshold = minThreshold || threshold;
         maxFusionReadyCount = maxFusionReadyCount || 0;
-        
+
         let maxThreshCheckIter = 20;
 
         wsm.serviceApi.estimateFusion({threshold: threshold}).then((res)=>{
             // nothing to optimize
-            if( counter === 0 && res.fusionReadyCount === 0) return resolve(0); 
+            if( counter === 0 && res.fusionReadyCount === 0) return resolve(0);
             // stop at maxThreshCheckIter or when threshold too low
             if( counter > maxThreshCheckIter || threshold < 10) return resolve(minThreshold);
             // we got a possibly best minThreshold
@@ -617,8 +617,8 @@ WalletShellManager.prototype._fusionSendTx = function(threshold, counter){
         counter = counter || 0;
         let maxIter = 256;
         if(counter >= maxIter) return resolve(wsm.fusionTxHash); // stop at max iter
-        
-        // keep sending fusion tx till it hit IOOR or reaching max iter 
+
+        // keep sending fusion tx till it hit IOOR or reaching max iter
         log.debug(`send fusion tx, iteration: ${counter}`);
         wsm.serviceApi.sendFusionTransaction({threshold: threshold}).then((resp)=> {
             wsm.fusionTxHash.push(resp.transactionHash);
@@ -677,7 +677,7 @@ WalletShellManager.prototype.optimizeWallet = function(){
 };
 
 WalletShellManager.prototype.networkStateUpdate = function(state){
-    if(!this.syncWorker) return;    
+    if(!this.syncWorker) return;
     log.debug('ServiceProcess PID: ' + this.servicePid);
     if(state === 0){
         // pause the syncworker, but leave service running
@@ -705,7 +705,7 @@ WalletShellManager.prototype.networkStateUpdate = function(state){
                     data: null
                 });
             },15000);
-        },2500);        
+        },2500);
     }
 };
 

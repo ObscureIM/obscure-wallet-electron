@@ -2,9 +2,9 @@
   "name": "Obsidian",
   "productName": "Obsidian Wallet",
   "description": "Obsidian GUI Wallet",
-  "version": "v0.0.1",
-  "homepage": "https://github.com/turtlecoin/turtle-wallet-electron",
-  "repository": "https://github.com/turtlecoin/turtle-wallet-electron",
+  "version": "v0.1.7",
+  "homepage": "https://github.com/ObsidianProtocol/obsidian-wallet-electron.git",
+  "repository": "https://github.com/ObsidianProtocol/obsidian-wallet-electron.git",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

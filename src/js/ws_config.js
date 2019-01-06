@@ -2,7 +2,7 @@ var config = {};
 
 // self explanatory, your application name, descriptions, etc
 config.appName = 'Obsidian Wallet';
-config.appDescription = 'Obsidian Wallet';
+config.appDescription = '';
 config.appSlogan = 'Privacy Maximized';
 config.appId = 'lol.turtlecoin.walletshell';
 config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electron.git';
@@ -11,7 +11,7 @@ config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electro
 config.daemonDefaultRpcPort = 11898;
 
 // wallet file created by this app will have this extension
-config.walletFileDefaultExt = 'twl';
+config.walletFileDefaultExt = 'wallet';
 
 // change this to match your wallet service executable filename
 config.walletServiceBinaryFilename = 'turtle-service';
@@ -60,9 +60,9 @@ config.mininumSend = 0.1;
 // default mixin/anonimity for transaction
 config.defaultMixin = 3;
 // to convert from atomic unit
-config.decimalDivisor = 100;
+config.decimalDivisor = 100000000;
 // to represent human readable value
-config.decimalPlaces = 8;
+config.decimalPlaces = 2;
 
 // obfuscate address book entries, set to false if you want to save it in plain json file.
 // not for security because the encryption key is attached here
