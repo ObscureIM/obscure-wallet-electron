@@ -8,7 +8,7 @@ config.appId = 'lol.turtlecoin.walletshell';
 config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electron.git';
 
 // default port number for your daemon (e.g. TurtleCoind)
-config.daemonDefaultRpcPort = 11897;
+config.daemonDefaultRpcPort = 11898;
 
 // wallet file created by this app will have this extension
 config.walletFileDefaultExt = 'twl';
@@ -38,8 +38,8 @@ config.remoteNodeListUpdateUrl = null
 
 // fallback remote node list, in case fetching update failed, fill this with known to works remote nodes
 config.remoteNodeListFallback = [
-  "209.97.174.174:11897",
-  "178.128.223.203:11897"
+  "209.97.174.174:11898",
+  "178.128.223.203:11898"
 ];
 
 // your currency name
