@@ -8,13 +8,13 @@ config.appId = 'lol.turtlecoin.walletshell';
 config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electron.git';
 
 // default port number for your daemon (e.g. TurtleCoind)
-config.daemonDefaultRpcPort = 57576;
+config.daemonDefaultRpcPort = 11897;
 
 // wallet file created by this app will have this extension
 config.walletFileDefaultExt = 'twl';
 
 // change this to match your wallet service executable filename
-config.walletServiceBinaryFilename = 'obsidian-service';
+config.walletServiceBinaryFilename = 'turtle-service';
 
 // version on the bundled service (turtle-service)
 config.walletServiceBinaryVersion = "v0.10.0";
@@ -31,16 +31,15 @@ config.walletServiceRpcPort = 8070;
 config.blockExplorerUrl = 'https://turtle.land/?hash=[[TX_HASH]]#blockchain_transaction';
 
 // default remote node to connect to, set this to a known reliable node for 'just works' user experience
-config.remoteNodeDefaultHost = 'nodes.hashvault.pro';
+config.remoteNodeDefaultHost = '209.97.174.174';
 
 // remote node list update url, set to null if you don't have one
-config.remoteNodeListUpdateUrl = 'https://raw.githubusercontent.com/turtlecoin/turtlecoin-nodes-json/master/turtlecoin-nodes.json';
+config.remoteNodeListUpdateUrl = null
 
 // fallback remote node list, in case fetching update failed, fill this with known to works remote nodes
 config.remoteNodeListFallback = [
-    'nodes.hashvault.pro:11898',
-    'public.turtlenode.io:11898',
-    'public.turtlenode.net:11898',
+  "209.97.174.174:11897",
+  "178.128.223.203:11897"
 ];
 
 // your currency name
