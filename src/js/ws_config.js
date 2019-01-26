@@ -1,10 +1,10 @@
 var config = {};
 
 // self explanatory, your application name, descriptions, etc
-config.appName = 'Obsidian Wallet';
+config.appName = 'Obscure Wallet';
 config.appDescription = '';
 config.appSlogan = 'Privacy Maximized';
-config.appId = 'lol.turtlecoin.walletshell';
+config.appId = 'obscure.im/wallet/electron';
 config.appGitRepo = 'https://github.com/ObsidianProtocol/obsidian-wallet-electron.git';
 
 // default port number for your daemon (e.g. TurtleCoind)
@@ -14,10 +14,10 @@ config.daemonDefaultRpcPort = 11898;
 config.walletFileDefaultExt = 'wallet';
 
 // change this to match your wallet service executable filename
-config.walletServiceBinaryFilename = 'turtle-service';
+config.walletServiceBinaryFilename = 'obscure-service';
 
 // version on the bundled service (turtle-service)
-config.walletServiceBinaryVersion = "v0.10.0";
+config.walletServiceBinaryVersion = "v1.1.0";
 
 // config file format supported by wallet service, possible values:
 // ini -->  for turtle service (or its forks) version <= v0.8.3
@@ -28,8 +28,8 @@ config.walletServiceConfigFormat = "json";
 config.walletServiceRpcPort = 8070;
 
 // block explorer url, the [[TX_HASH]] will be substituted w/ actual transaction hash
-config.blockExplorerUrl = 'https://turtle.land/?hash=[[TX_HASH]]#blockchain_transaction';
 
+config.blockExplorerUrl = 'https://explore.obscure.im/transaction.html?hash=[[TX_HASH]]';
 // default remote node to connect to, set this to a known reliable node for 'just works' user experience
 config.remoteNodeDefaultHost = '209.97.174.174';
 
@@ -43,15 +43,15 @@ config.remoteNodeListFallback = [
 ];
 
 // your currency name
-config.assetName = 'Obsidian';
+config.assetName = 'Obscure';
 // your currency ticker
-config.assetTicker =  'XSD';
+config.assetTicker =  'XSC';
 // your currency address prefix, for address validation
-config.addressPrefix =  'XSD';
+config.addressPrefix =  'XSC';
 // standard wallet address length, for address validation
-config.addressLength = 99;
+config.addressLength = 98;
 // intergrated wallet address length, for address validation
-config.integratedAddressLength = 187;
+config.integratedAddressLength = 188;
 
 // minimum fee for sending transaction
 config.minimumFee = 0.1;

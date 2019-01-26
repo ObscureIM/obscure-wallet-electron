@@ -1,8 +1,8 @@
 {
-  "name": "Obsidian",
-  "productName": "Obsidian Wallet",
-  "description": "Obsidian GUI Wallet",
-  "version": "v0.1.7",
+  "name": "Obscure",
+  "productName": "Obscure Wallet",
+  "description": "Obscure GUI Wallet",
+  "version": "v0.2.0",
   "homepage": "https://github.com/ObsidianProtocol/obsidian-wallet-electron.git",
   "repository": "https://github.com/ObsidianProtocol/obsidian-wallet-electron.git",
   "main": "main.js",
